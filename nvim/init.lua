@@ -3,7 +3,8 @@
 require('config.plugins') -- The plugins
 require('config.nvim-cmp') -- Configures nvim-cmp
 require('config.lualine') -- The lualine config
-require('config.bufferline')
+-- require('config.bufferline') -- Bufferline! Yay!
+require('config.treesitter') -- The treesitter config
 require('config.nvim-tree') -- NvimTree Config
 require('config.ui') -- Some UI things
 require('config.keymaps') -- Keymaps!

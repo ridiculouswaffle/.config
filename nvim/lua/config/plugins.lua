@@ -16,10 +16,29 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Let's define some packages
 require("lazy").setup({
-  "nordtheme/vim",
+  --{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
+  {
+    "gbprod/nord.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("nord").setup({})
+      vim.cmd.colorscheme("nord")
+    end,
+  },
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        -- config
+      }
+    end,
+    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  },
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   "neovim/nvim-lspconfig",
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -34,7 +53,7 @@ require("lazy").setup({
   "saadparwaiz1/cmp_luasnip",
   "nvim-tree/nvim-tree.lua",
   "nvim-treesitter/nvim-treesitter",
-  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
-  "famiu/bufdelete.nvim",
   "onsails/lspkind-nvim",
+  "mattn/emmet-vim",
+  "SmiteshP/nvim-navic",
 })

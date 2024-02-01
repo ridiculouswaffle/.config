@@ -13,9 +13,12 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
+--config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.color_scheme = 'nord'
+config.window_background_opacity = 0.95
+config.window_close_confirmation = 'NeverPrompt'
 config.enable_tab_bar = false
-config.font = wezterm.font('Iosevka Nerd Font', { weight = 'DemiBold' })
+config.font = wezterm.font('Iosevka Nerd Font', { weight = 'Medium' })
 config.font_size = 14.0
 config.window_decorations = 'RESIZE'
 
